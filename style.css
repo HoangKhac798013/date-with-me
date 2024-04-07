@@ -1,0 +1,101 @@
+#container {
+    display: grid;
+    grid-template: 1fr 2fr 2fr / repeat(4, 1fr);
+}
+
+#sidebar {
+    background-color: #fbbf24;
+    grid-row: 1/4;
+}
+
+#projects {
+    background-color: #fef3c7;
+    grid-area: 2/2/4/4
+}
+
+#announcement {
+    background-color: #facc15;
+}
+
+#trending {
+    background-color: #fde68a;
+}
+
+#user {
+    background-color: #eab308;
+    grid-area: 1/2/2/5;
+}
+
+div {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+#dashboard-image {
+    fill: blue;
+    width: 30px;
+    height: 30px;
+    display: block;
+    /* margin: auto; */
+}
+
+.sideBarLinks {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.sideBarContents {
+    width: 20px;
+    height: 20px;
+}
+
+#searchBar {
+    display: flex;
+}
+
+#avatar {
+    width: 30px;
+    height: 30px;
+}
+
+#searchForm {
+    display: flex;
+    flex: 1;
+}
+
+#searchInput {
+    flex: 1;
+}
+
+#hiThere{
+    display: flex;
+}
+
+#welcome{
+    flex: 1;
+}
+
+#name {
+    font-size: 20px;
+}
+
+#avatarInWelcome {
+    width: 30px;
+    height: 30px;
+}
+
+#projectLists {
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(2,1fr);
+    gap: 15px
+}
+
+button {
+    border-radius: 10px;
+}
+
+.trending{
+    display: flex;
+}
