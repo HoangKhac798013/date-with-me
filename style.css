@@ -1,63 +1,86 @@
+* {
+    /* border: 1px black solid; */
+}
 #container {
     display: grid;
     grid-template: 1fr 2fr 2fr / repeat(4, 1fr);
+    padding: 0;
+    margin: 0;
+    /* padding-top: 20px; */
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #sidebar {
+    display: grid;
+    grid-template: 2fr repeat(5, 1fr) 3fr repeat(3, 1fr) / 1fr 5fr;
     background-color: #fbbf24;
     grid-row: 1/4;
-}
-
-#projects {
-    background-color: #fef3c7;
-    grid-area: 2/2/4/4
-}
-
-#announcement {
-    background-color: #facc15;
-}
-
-#trending {
-    background-color: #fde68a;
+    text-justify: center;
+    padding-bottom: 100%;
 }
 
 #user {
     background-color: #eab308;
     grid-area: 1/2/2/5;
+    padding-left: 30px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
-div {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+#communities {
+    margin-bottom: 80px;
 }
 
-#dashboard-image {
-    fill: blue;
-    width: 30px;
+#dashboardImage {
+    /* fill: blue; */
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+    align-self: center;
+}
+
+#dashboardText {
+    font-size: 28px;
+    align-self: center;
+}
+
+#communities {
     height: 30px;
-    display: block;
-    /* margin: auto; */
 }
 
 .sideBarLinks {
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    display: contents; 
 }
 
 .sideBarContents {
-    width: 20px;
-    height: 20px;
+    justify-self: center;
+    width: 30px;
+    height: 30px;
+}
+
+.sideBarText {
+    font-size: 23px;
+    /* align-self: center; */
 }
 
 #searchBar {
     display: flex;
-}
-
-#avatar {
-    width: 30px;
-    height: 30px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    align-items: center;
 }
 
 #searchForm {
@@ -67,10 +90,52 @@ div {
 
 #searchInput {
     flex: 1;
+    background-color: grey;
+    height: 30px;
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
+#magnifyingGlass{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#bell {
+    width: 30px;
+    height: 30px;
+}
+
+#bellButton {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 30px;
+    margin-left: 100px;
+    /* height: 30px; */
+}
+
+#avatar {
+    width: 40px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+}
+
+#nameInSearchBar {
+    margin-right: 80px;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 #hiThere{
     display: flex;
+    align-items: center;
+    padding-right: 60px;
+    padding-bottom: 10px;
 }
 
 #welcome{
@@ -78,24 +143,168 @@ div {
 }
 
 #name {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#hello {
+    font-size: 17px;
+    font-weight: bold;
 }
 
 #avatarInWelcome {
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    margin-right: 20px;
+}
+
+.welcomeButton{
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    justify-self: center;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: #facc15;
+}
+
+#projects {
+    padding: 40px 15px 15px;
+    background-color: #fef3c7;
+    grid-area: 2/2/4/4
 }
 
 #projectLists {
     display: grid;
     grid-template: repeat(3,1fr)/repeat(2,1fr);
-    gap: 15px
+    gap: 15px;
+}
+.header {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-button {
-    border-radius: 10px;
-}
-
-.trending{
+.projectCard {
     display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+    /* border: 1px black solid; */
+    background-color: brown;
+}
+
+.sideStretch{
+    background-color: aqua;
+    width: 10px;
+}
+
+.dateImg {
+    height: 20vh;
+    width: auto;
+}
+
+.dateHeader {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.projectCard .content {
+    padding: 25px 20px 25px 15px;
+    flex: 1;
+}
+
+.projectCard .svgs {
+    margin-top: 20px;
+    display: flex;
+    margin-left: 60%;
+    justify-content: space-between;
+}
+
+.projectCard .svgs svg {
+    height: 20px;
+    width: auto;
+}
+
+.projectCard .svgs button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.projectCard img {
+    height: 120px;
+    width: 50%;
+    object-fit: cover;
+    padding-top: 10px;
+}
+
+.restaurantImages {
+    display: flex;
+}
+
+#announcement {
+    background-color: #facc15;
+    padding: 40px 15px 15px;
+}
+
+#announcement #header {
+    font-size: 23px;
+    font-weight: bold;
+    
+}
+
+#announcement .newsHeader .news {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#announcement .newsHeader {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#announcement #announcementList {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+#trending .item{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+#trending {
+    background-color: #fde68a;
+    padding: 25px;
+}
+
+#header {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+#trending img {
+    width: 50px;
+    height: auto;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+#trending #list {
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#trending .at {
+    font-size: large;
+    font-weight: bold;
 }
