@@ -3,7 +3,7 @@
 }
 #container {
     display: grid;
-    grid-template: 1fr 2fr 2fr / repeat(4, 1fr);
+    grid-template: auto auto auto / repeat(5, 1fr);
     padding: 0;
     margin: 0;
     /* padding-top: 20px; */
@@ -26,30 +26,28 @@ hr {
 
 #sidebar {
     display: grid;
-    grid-template: 2fr repeat(5, 1fr) 3fr repeat(3, 1fr) / 1fr 5fr;
-    background-color: #fbbf24;
+    grid-template: 3fr repeat(5, 1fr) 3fr repeat(12, 1fr) / 1fr 5fr;
+    background-color: #a4d8ff;
     grid-row: 1/4;
     text-justify: center;
-    padding-bottom: 100%;
+    color: #003255;
 }
 
 #user {
-    background-color: #eab308;
-    grid-area: 1/2/2/5;
+    background-color: #cfe0f2;
+    grid-area: 1/2/2/6;
     padding-left: 30px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-}
-
-#communities {
-    margin-bottom: 80px;
+    overflow: hidden;
+    color: #002244;
 }
 
 #dashboardImage {
-    /* fill: blue; */
     width: 50px;
     height: 50px;
     justify-self: center;
     align-self: center;
+    fill: #002244;
 }
 
 #dashboardText {
@@ -57,9 +55,9 @@ hr {
     align-self: center;
 }
 
-#communities {
+/* #communities {
     height: 30px;
-}
+} */
 
 .sideBarLinks {
     display: contents; 
@@ -69,10 +67,12 @@ hr {
     justify-self: center;
     width: 30px;
     height: 30px;
+    fill: #002244;
 }
 
 .sideBarText {
     font-size: 23px;
+    height: 23px;
     /* align-self: center; */
 }
 
@@ -89,18 +89,15 @@ hr {
     /* border: 1px solid black; */
 }
 
+#searchInput:focus {
+    border: 1px solid #002244;
+}
+
 #searchInput {
     outline: none;
-    border: 1px solid black;
-}
-
-#searchInput:focus {
-    border: 1px solid blue;
-}
-
-#searchInput {
+    border: 1px solid #002244;
     flex: 1;
-    background-color: grey;
+    background-color: #9fbddd;
     height: 30px;
     border-radius: 30px;
     padding-left: 10px;
@@ -110,11 +107,13 @@ hr {
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    fill: #002244;
 }
 
 #bell {
     width: 30px;
     height: 30px;
+    fill: #002244;
 }
 
 #bellButton {
@@ -170,22 +169,26 @@ hr {
 }
 
 .welcomeButton{
-    margin-left: 20px;
-    width: 100px;
+    margin-left: 5%;
+    width: 8%;
     height: 40px;
     border-radius: 20px;
     justify-self: center;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    border-color: #facc15;
-
+    border-color: #FFFFFF;
+    background-color: #a4d8ff;
+    color: #003366;
+    /* border-bottom: #add8e6; */
+    /* transition: all 0.3s ease; */
 }
 
 #projects {
     padding: 40px 15px 15px;
-    background-color: #fef3c7;
-    grid-area: 2/2/4/4
+    background-color: #f2f4f6;
+    grid-area: 2/2/4/5;
+    color: #002244;
 }
 
 #projectLists {
@@ -205,11 +208,11 @@ hr {
     overflow: hidden;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
     /* border: 1px black solid; */
-    background-color: brown;
+    background-color: #cfe0f2;
 }
 
 .sideStretch{
-    background-color: aqua;
+    background-color: #3b4d61;
     width: 10px;
 }
 
@@ -233,6 +236,7 @@ hr {
     display: flex;
     margin-left: 60%;
     justify-content: space-between;
+    fill: #002244;
 }
 
 .projectCard .svgs svg {
@@ -259,8 +263,9 @@ hr {
 }
 
 #announcement {
-    background-color: #facc15;
+    background-color: #f5f5f5;
     padding: 40px 15px 15px;
+    color: #002244;
 }
 
 #announcement #header {
@@ -280,7 +285,7 @@ hr {
 }
 
 #announcement #announcementList {
-    border: 1px solid black;
+    background-color: #cfe0f2;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
@@ -293,8 +298,9 @@ hr {
 }
 
 #trending {
-    background-color: #fde68a;
+    background-color: #f5f5f5;
     padding: 25px;
+    color: #002244;
 }
 
 #header {
@@ -310,7 +316,7 @@ hr {
 }
 
 #trending #list {
-    background-color: aqua;
+    background-color: #cfe0f2;
     border-radius: 20px;
     padding: 10px;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
@@ -319,4 +325,8 @@ hr {
 #trending .at {
     font-size: large;
     font-weight: bold;
+}
+
+.liked {
+    fill: #ff69b4;
 }
