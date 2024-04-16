@@ -1,5 +1,5 @@
-* {
-    /* border: 1px black solid; */
+body {
+    font-family: 'Quicksand', 'Baloo', 'Open Sans', sans-serif;
 }
 #container {
     display: grid;
@@ -137,7 +137,8 @@ hr {
 #nameInSearchBar {
     margin-right: 80px;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: 550;
+    font-family: 'Baloo', 'Quicksand', 'san-serif';
 }
 
 #hiThere{
@@ -153,7 +154,9 @@ hr {
 
 #name {
     font-size: 25px;
-    font-weight: bolder;
+    /* font-weight: bold; */
+    font-weight: 550;
+    font-family: 'Baloo', 'Quicksand', 'san-serif';
 }
 
 #hello {
@@ -169,6 +172,7 @@ hr {
 }
 
 .welcomeButton{
+    font-family: 'Quicksand', 'Baloo', 'Open Sans', sans-serif;
     margin-left: 5%;
     width: 8%;
     height: 40px;
